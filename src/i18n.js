@@ -12,8 +12,6 @@ const resources = {
 
 const lang = localStorage.cherrySwapLanguage || 'en'
 
-console.log('lang ???????????', lang)
-
 i18n.use(LanguageDetector).use(initReactI18next).init({
   resources,
   fallbackLng: lang,
