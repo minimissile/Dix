@@ -1,3 +1,5 @@
 {
-  "wallet": "Wallet"
+  "wallet": "Wallet",
+  "goLogin": "Already have an account? Direct Login",
+  "goRegister": "No account? Register a new account"
 }
