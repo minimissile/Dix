@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {loadDevTools} from "jira-dev-tool";
-import AppProviders from "./context";
+import {AppProviders} from "./context";
 import App from './App';
 
 import './i18n';

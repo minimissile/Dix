@@ -5,7 +5,7 @@ import {useEffect, useRef} from "react";
  * @param title {string} 要设置的标题
  * @param keepOnUnmount {boolean} 页面回退时是否缓存当前标题
  */
-export default (title: string, keepOnUnmount = true) => {
+export const  useDocumentTitle = (title: string, keepOnUnmount = true) => {
   const oldTitle = useRef(document.title).current
 
   useEffect(() => {

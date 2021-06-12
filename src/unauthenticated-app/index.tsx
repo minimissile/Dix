@@ -6,7 +6,7 @@ import {RegisterScreen} from "./register";
 import {Card, Button} from "antd";
 import {useTranslation} from "react-i18next";
 import {ErrorBox} from "../components/lib";
-import useDocumentTitle from "../hooks/useDocumentTitle";
+import {useDocumentTitle} from "../hooks/useDocumentTitle";
 
 export const UnauthenticatedApp = () => {
   const [isRegister, setIsRegister] = useState(false)
@@ -28,7 +28,7 @@ export const UnauthenticatedApp = () => {
       <ShadowCard>
         <Title>{isRegister ? "请注册" : "请登录"}</Title>
         <ErrorBox error={error}></ErrorBox>
-        {isRegister ? <RegisterScreen/> : <LoginScreen/>}
+        {isRegister ? <RegisterScreen onError={setError}/> : <LoginScreen/>}
         <Button type={"link"} onClick={() => setIsRegister(!isRegister)}>
           {isRegister ? t('goLogin') : t('goRegister')}
         </Button>
@@ -64,4 +64,8 @@ const ShadowCard = styled(Card)`
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
   text-align: center;
+`;
+
+export const LongButton = styled(Button)`
+  width: 100%;
 `;
